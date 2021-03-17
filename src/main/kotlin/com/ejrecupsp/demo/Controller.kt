@@ -16,8 +16,8 @@ class Controller(private val repoUsu:RepositorioUsuarios) {
         repoUsu.save(usu)
     }
 
-    @GetMapping("/usuario/peticion/{id}/{texto}")
+    /*@GetMapping("/usuario/peticion/{id}/{texto}")
     fun peticion(@PathVariable id : String, @PathVariable texto: String):String{
         //rellenar
-    }
+    }*/
 }
