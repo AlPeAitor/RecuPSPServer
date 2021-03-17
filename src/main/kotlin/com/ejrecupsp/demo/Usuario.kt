@@ -11,7 +11,7 @@ class Usuario(var nombre: String="") {
 
     @Id
     @GeneratedValue
-    private val idAuto: Long? = null
+    public val idAuto: Long? = null
 
     override fun equals(other: Any?): Boolean {
         if (other is Usuario){
@@ -29,7 +29,6 @@ class Usuario(var nombre: String="") {
     var contra: String = "14"
     var idUsu = ""
     var claveCifrado = ""
-    var texto = ""
     constructor (nombre: String, contra: String): this(nombre){
         this.contra = contra
         this.idUsu = nombre.first() + nombre.count().toString()

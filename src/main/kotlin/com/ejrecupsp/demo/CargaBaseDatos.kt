@@ -12,9 +12,10 @@ class CargaBaseDatos {
     }
 
     @Bean
-    fun initDatabase(datos: RepositorioUsuarios): CommandLineRunner {
+    fun initDatabase(datos: RepositorioUsuarios, datosTexto: RepositorioTexto): CommandLineRunner {
         return CommandLineRunner { args: Array<String?>? ->
             logger.info("Preloading " + datos.save(Usuario("Aitor", "123")))
+            logger.info("Preloading " + datosTexto.save(Texto("Aitor", "123")))
         }
     }
 }
